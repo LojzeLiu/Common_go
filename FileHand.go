@@ -4,20 +4,20 @@ import (
 	"os"
 )
 
-type FileHand struct {
-}
-
-func GetFileHand() *FileHand {
-	tmp := &FileHand{}
-	return tmp
-}
+//type FileHand struct {
+//}
+//
+//func GetFileHand() *FileHand {
+//	tmp := &FileHand{}
+//	return tmp
+//}
 
 /*
 功能：判断文件是否存在
 参数：path 文件路径
 返回：true：文件存在，false：文件不存在
 */
-func (this *FileHand) FileExists(path string) bool {
+func FileExists(path string) bool {
 	_, err := os.Stat(path)
 	if err != nil {
 		if os.IsExist(err) {
