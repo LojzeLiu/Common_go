@@ -30,7 +30,6 @@ func GetSaltStr(n int) string {
 
 //对用户名和密码加密
 func NamePaswdToHash256(name, paswd, salt string) string {
-	fmt.Println(salt)
 	data := name + paswd + salt
 	sum := sha256.Sum256([]byte(data))
 	sumStr := fmt.Sprintf("%x", sum)
