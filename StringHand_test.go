@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-//func GetSaltStr(n int) string {
+//func GetSaltStr(n int) string
 func TestGetSaltStr(t *testing.T) {
 	salt := GetSaltStr(8)
 	if len(salt) != 16 {
